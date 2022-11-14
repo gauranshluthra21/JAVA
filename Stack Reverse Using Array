@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class stackreverseusingarray {
+
+
+    static void printReverse(Stack<Integer> s){
+        if(s.isEmpty()){
+            return;
+        }
+        int x = s.pop();
+        printReverse(s);
+        System.out.println(x);
+        s.push(x);
+
+    }
+
+    public static void main(String[] args) {
+
+        Stack<Integer> st = new Stack<> ();
+        st.push(10);
+        st.push(20);
+        st.push(30);
+        st.push(40);
+        printReverse(st);        
+    }
+    
+}

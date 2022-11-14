@@ -1,0 +1,41 @@
+import java.util.*;
+
+public class stackreverse {
+
+
+    static void printReverse(Stack<Integer> s){
+        if(s.isEmpty()){
+            return;
+        }
+        int x = s.pop();
+        printReverse(s);
+        System.out.println(x);
+        s.push(x);
+
+    }
+
+    static void copy(Stack<Integer> s , Stack<Integer> s1){
+        if(s.idEmpty()){
+            return;
+        }
+
+    }
+
+    public static void main(String[] args) {
+
+        Stack<Integer> st = new Stack<> ();
+        st.push(10);
+        st.push(20);
+        st.push(30);
+        st.push(40);
+        System.out.println(st); 
+        Stack<Integer> st1 = new Stack<>();
+        copy(st,st1);
+        while(! st1.isEmpty()){
+            st.push(st1.pop());
+        }
+        System.out.println(st);
+               
+    }
+    
+}
